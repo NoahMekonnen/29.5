@@ -131,6 +131,14 @@ class LinkedList {
     if (currentNode == this.head && idx ==0){
       this.head = currentNode.next
     }
+    else if(currentNode.next == null) {
+      this.head = null
+      this.tail = null
+    }
+    else if (currentNode.next.next == null){
+      currentNode.next = currentNode.next.next
+      this.tail = currentNode
+    }
     else{
       currentNode.next = currentNode.next.next
     }
@@ -151,4 +159,5 @@ class LinkedList {
   }
 }
 
+let newList = new LinkedList([1,2,4,7])
 module.exports = LinkedList;
