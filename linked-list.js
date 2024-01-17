@@ -158,6 +158,4 @@ class LinkedList {
     return sum/count
   }
 }
-
-let newList = new LinkedList([1,2,4,7])
 module.exports = LinkedList;
